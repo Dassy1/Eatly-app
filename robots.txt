@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /config/
+Disallow: /database/
+Disallow: /includes/
+Disallow: /models/
+Disallow: /controllers/

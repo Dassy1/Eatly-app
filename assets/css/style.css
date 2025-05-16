@@ -1,0 +1,189 @@
+/* EATLY - Custom Styles */
+
+/* General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/* Colors */
+.text-success {
+    color: #28a745 !important;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+/* Recipe Cards */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Recipe Detail */
+.ingredient-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ingredient-item:last-child {
+    border-bottom: none;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Pagination */
+.page-item.active .page-link {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.page-link {
+    color: #28a745;
+}
+
+.page-link:hover {
+    color: #218838;
+}
+
+/* Home Page Hero */
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 2rem 0;
+}
+
+/* Desktop View (Large Screens) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-section {
+        padding: 6rem 0;
+    }
+    
+    .card-img-top {
+        height: 250px;
+    }
+    
+    .recipe-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-section {
+        padding: 4rem 0;
+    }
+    
+    .recipe-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .navbar .form-inline {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .card-img-top {
+        height: 180px;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Animation for bookmark button */
+.bookmark-btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.bookmark-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Ingredient rows in add recipe form */
+.ingredient-row {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.ingredient-row:hover {
+    background-color: #f8f9fa;
+}

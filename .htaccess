@@ -1,0 +1,37 @@
+# EATLY .htaccess file
+
+# Enable rewriting
+RewriteEngine On
+
+# Handle API requests
+RewriteRule ^api(/.*)?$ api/index.php [QSA,L]
+
+# Redirect all other requests to index.php except for existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect the .htaccess file
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Protect sensitive files
+<FilesMatch "^(config|database|includes)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# PHP settings
+php_flag display_errors off
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value max_input_time 300
